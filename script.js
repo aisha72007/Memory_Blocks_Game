@@ -19,4 +19,9 @@ console.log(blocks.length)
 
 let orderRange = [...Array(blocks.length).keys()]
 
-console.log(orderRange)
+// add order css property to game Blocks
+blocks.forEach((block, index) => {
+
+  block.style.order = index
+
+})
