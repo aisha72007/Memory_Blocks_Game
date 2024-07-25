@@ -28,10 +28,38 @@ blocks.forEach((block, index) => {
 
   block.style.order = orderRange[index]
 
+  // Add Click Event
+  block.addEventListener('click', function(){
+
+    // Trigger The Flip Block function
+    flipBlock(block)
+
+  })
+
 })
 
-// shuffle function
+// Flip Block Function
+function flipBlock(selectedBlock){
 
+  // Add class is-flipped
+  selectedBlock.classList.add("is-flipped")
+
+  // Collect all Flipped Cards
+  let allFlippedBlocks = blocks.filter(flippedBlock => flippedBlock.classList.contains('is-flipped'));
+
+  // If there is tow selcted Blocks
+  if(allFlippedBlocks.length === 2){
+
+    //console.log("Two flipped blocks selcted")
+
+    // Stop Clicking Function
+
+    // Check Matched Block Function
+  }
+
+}
+
+// Shuffle function
 function shuffle(array){
   // Settings Vars
   let current = array.length,
