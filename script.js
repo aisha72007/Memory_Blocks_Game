@@ -26,7 +26,7 @@ shuffle(orderRange)
 // add order css property to game Blocks
 blocks.forEach((block, index) => {
 
-  block.style.order = index
+  block.style.order = orderRange[index]
 
 })
 
