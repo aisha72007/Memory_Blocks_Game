@@ -53,11 +53,24 @@ function flipBlock(selectedBlock){
     //console.log("Two flipped blocks selcted")
 
     // Stop Clicking Function
+    stopClicking();
 
     // Check Matched Block Function
   }
 
 }
+
+// Stop Clicking Function
+function stopClicking(){
+  // Add class no Clicking on Main Container
+  blocksContainer.classList.add('no-Clicking');
+
+  setTimeout(() => {
+  // Remove Class No Clicking After the Duration
+  blocksContainer.classList.remove('no-Clicking');
+  }, duration);
+}
+
 
 // Shuffle function
 function shuffle(array){
