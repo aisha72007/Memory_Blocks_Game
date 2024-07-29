@@ -91,6 +91,7 @@ body{
   backface-visibility: hidden;
   border: 5px solid #2196f3;
 }
-.memory-game-blocks .game-block.is-flipped{
+.memory-game-blocks .game-block.is-flipped,
+.memory-game-blocks .game-block.has-matched{
   transform: rotateY(180deg);
 }

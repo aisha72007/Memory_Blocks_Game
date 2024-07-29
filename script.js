@@ -56,6 +56,7 @@ function flipBlock(selectedBlock){
     stopClicking();
 
     // Check Matched Block Function
+    checkMatchedBlocks(allFlippedBlocks[0], allFlippedBlocks[1])
   }
 
 }
@@ -69,6 +70,27 @@ function stopClicking(){
   // Remove Class No Clicking After the Duration
   blocksContainer.classList.remove('no-Clicking');
   }, duration);
+}
+
+
+// Check Matched Block
+function checkMatchedBlocks(firstBlock, secondBlock){
+  let triesElement = document.querySelector('.tries span')
+
+  if(firstBlock.dataset.automotiveIcons === secondBlock.dataset.automotiveIcons){
+    firstBlock.classList.remove('is-flipped')
+    secondBlock.classList.remove('is-flipped')
+
+    firstBlock.classList.add('has-matched')
+    secondBlock.classList.add('has-matched')
+  } else {
+    triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1
+
+  setTimeout(() => {
+    firstBlock.classList.remove('is-flipped')
+    secondBlock.classList.remove('is-flipped')
+    }, duration)  
+  }
 }
 
 
