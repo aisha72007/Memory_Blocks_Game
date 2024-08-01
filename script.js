@@ -77,7 +77,7 @@ function stopClicking(){
 function checkMatchedBlocks(firstBlock, secondBlock){
   let triesElement = document.querySelector('.tries span')
 
-  if(firstBlock.dataset.automotiveIcons === secondBlock.dataset.automotiveIcons){
+  if(firstBlock.dataset.automotiveicons === secondBlock.dataset.automotiveicons){
     firstBlock.classList.remove('is-flipped')
     secondBlock.classList.remove('is-flipped')
 
